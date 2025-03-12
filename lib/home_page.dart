@@ -38,12 +38,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                counterCubit.increment();
-              },
-              tooltip: 'Increment',
-              child: const Icon(Icons.add),
+            floatingActionButton: Column(
+              children: [
+                FloatingActionButton(
+                  onPressed: () {
+                    counterCubit.increment();
+                  },
+                  tooltip: 'Increment',
+                  child: const Icon(Icons.add),
+                ),
+                FloatingActionButton(
+                  onPressed: () {
+                    counterCubit.decrement();
+                  },
+                  tooltip: 'Decrement',
+                  child: const Icon(Icons.minimize),
+                ),
+              ],
             ),
           );
         });
