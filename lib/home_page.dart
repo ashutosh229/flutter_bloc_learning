@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder(
+    return BlocBuilder<CounterCubit, int>(
         bloc: counterCubit,
         builder: (context, counter) {
           return Scaffold(
